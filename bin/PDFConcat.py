@@ -72,7 +72,7 @@ def concatenate_and_rotate(filenames, states):
                 page = pdf_read_obj.getPage(pagenum)
                 page.rotateClockwise(info[1])
                 pdf_write_obj.addPage(page)
-            output_obj = open('output.pdf', 'wb')
+            output_obj = open('output.pdf', 'ab')
             pdf_write_obj.write(output_obj)
             output_obj.close()
 
